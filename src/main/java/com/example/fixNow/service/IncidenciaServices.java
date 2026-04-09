@@ -3,10 +3,13 @@ package com.example.fixNow.service;
 import com.example.fixNow.model.Incidencia;
 //import de la clase repository
 import com.example.fixNow.repository.IncidenciaRepositoty;
+import org.springframework.stereotype.Service;
 //import de opcinal
 import java.util.Optional;
 //import de listas
 import java.util.List;
+
+@Service
 public class IncidenciaServices {
     //variable de para usar repository
     private final IncidenciaRepositoty incidenciaRepositoty;

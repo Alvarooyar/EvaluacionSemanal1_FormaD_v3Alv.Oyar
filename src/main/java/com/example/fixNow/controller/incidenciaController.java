@@ -27,6 +27,7 @@ public class incidenciaController {
     }
 
     //GET : listar las incidencias
+    @GetMapping
     public ResponseEntity<?> listarIncidencias(){
         try{
             List<Incidencia> incidencias = incidenciaService.listaDeInicdencias();
@@ -52,6 +53,7 @@ public class incidenciaController {
     }
 
     //POST : guardar Incidencia
+    @PostMapping
     public ResponseEntity<?> guardarIncidencia(@RequestBody Incidencia incidencia){
         try{
             if (incidencia.getId()==null || incidencia.getTitulo()==null || incidencia.getDescripcion()==null || incidencia.getEstado()==null || incidencia.getPreoridad()==null || incidencia.getUsuarioReportante()==null || incidencia.getFrchaRegistro()==null) {
@@ -84,4 +86,4 @@ public class incidenciaController {
     }
 }
 
-    }
+
